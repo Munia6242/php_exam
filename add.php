@@ -6,7 +6,7 @@
     $name = $_POST['product_name'];
     $price = $_POST['product_price'];
     $description = $_POST['product_description'];
-    $image = $_FILES['image'];
+    $image = $_FILES['product_image'];
     $expired_date = $_POST['expired_date'];
 
     //Product image upload
@@ -24,7 +24,7 @@
 
 
         //Check file type (only allow jpg, png, jpeg, gif)
-        $allowed_types = ['jpg', 'jpeg', 'png', 'gif'];
+        $allowed_types = ['jpg', 'jpeg', 'png', 'gif' , 'webp', 'jfif'];
         $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
         if (!in_array($imageFileType, $allowed_types)) {
             die("Sorry, only JPG, JPEG, PNG & GIF files are allowed.");
@@ -33,7 +33,7 @@
 
     //Insert product into database
     if ($is_connected) {
-        $query = "INSERT INTO product_store (name, price, description, image, expired_date) VALUES ('$name', '$price', '$description', '$target_file', '$expired_date')";
+        $query = "INSERT INTO product_table (product_name, product_price, product_description, product_image, expired_date) VALUES ('$name', '$price', '$description', '$target_file', '$expired_date')";
 
         if (mysqli_query($connection, $query)) {
             header('Location: index.php');

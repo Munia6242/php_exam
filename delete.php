@@ -4,10 +4,10 @@ require_once 'includes/config.php';
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
     // Get image path
-    $sql = "SELECT image FROM product_table WHERE id = '$id'";
+    $sql = "SELECT product_image FROM product_table WHERE id = '$id'";
     $result = mysqli_query($connection, $sql);
     if ($result && $row = mysqli_fetch_assoc($result)) {
-        $image_path = $row['image'];
+        $image_path = $row['product_image'];
         // Delete product from database
         $delete_sql = "DELETE FROM product_table WHERE id = '$id'";
         if (mysqli_query($connection, $delete_sql)) {

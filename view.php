@@ -31,11 +31,12 @@
             <?php if (!empty($products)): ?>
                 <?php foreach ($products as $row): ?>
                     <div class="card mb-3">
-                        <img src="<?php echo $row['image']; ?>" class="card-img-top" alt="<?php echo $row['name']; ?>" height="600px" width="300px"/>
+                        <img src="<?php echo $row['product_image']; ?>" class="card-img-top" alt="<?php echo $row['product_name']; ?>" height="600px" width="300px"/>
                         <div class="card-body">
-                            <h3 class="card-title"><?php echo $row['name']; ?></h3>
-                            <p class="card-text">Price: $<?php echo $row['price']; ?></p>
-                            <p class="card-text">Description: <?php echo $row['description']; ?></p>
+                            <h3 class="card-title"><?php echo $row['product_name']; ?></h3>
+                            <p class="card-text">Price: $<?php echo $row['product_price']; ?></p>
+                            <p class="card-text">Description: <?php echo $row['product_description']; ?></p>
+                            <p class="card-text">Expired Date: <?php echo $row['expired_date']; ?></p>
                         </div>
                     </div>
                 <?php endforeach; ?>

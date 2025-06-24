@@ -46,7 +46,7 @@
                             <td><?php echo $row['product_name']; ?></td>
                             <td><?php echo $row['product_description']; ?></td>
                             <td><?php echo $row['product_price']; ?></td>
-                            <td><img src="<?php echo $row['image']; ?>" alt="<?php echo $row['product_name']; ?>" class="img-fluid" height="100px" width="100px"/></td>
+                            <td><img src="<?php echo $row['product_image']; ?>" class="img-fluid" height="100px" width="100px"/></td>
                             <td><?php echo $row['expired_date']; ?></td>
                             <td>
                                 <a href="view.php?id=<?php echo $row['id']; ?>"><button class="btn btn-primary btn-sm">View</button></a>

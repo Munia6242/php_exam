@@ -45,15 +45,15 @@
                         </div>
                         <div class="form-group">
                             <label for="image">Product Image</label>
-                            <img src="<?php echo $row['image']; ?>" alt="Product Image" class="img-fluid" style="width: 100px; height: 100px;">
-                            <input type="file" class="form-control-file" id="image" name="image" accept="image/*">
+                            <img src="<?php echo $row['product_image']; ?>" alt="Product Image" class="img-fluid" style="width: 100px; height: 100px;">
+                            <input type="file" class="form-control-file" id="image" name="product_image" accept="image/*">
                         </div>
                         <div class="form-group">
                             <label for="expired_date">Expired Date</label>
                             <input type="date" class="form-control" id="expired_date" name="expired_date" value="<?php echo $row['expired_date']; ?>" required>
                         </div>
                         <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
-                        <input type="hidden" name="old_image" value="<?php echo $row['image']; ?>">
+                        <input type="hidden" name="old_image" value="<?php echo $row['product_image']; ?>">
                         <button type="submit" class="btn btn-primary">Update Product</button>
                     </form>
                 <?php endforeach; ?>

@@ -31,8 +31,8 @@
                     <input type="number" class="form-control" id="product_price" name="product_price" step="0.01" required>
                 </div>
                 <div class="form-group">
-                    <label for="image">Product Image</label>
-                    <input type="file" class="form-control-file" id="image" name="image" accept="image/*" required>
+                    <label for="product_image">Product Image</label>
+                    <input type="file" class="form-control-file" id="image" name="product_image" accept="image/*" required>
                 </div>
                 <div class="form-group">
                     <label for="expired_date">Expired Date</label>
